@@ -1,0 +1,57 @@
+#first {
+    text-align: center;
+    color:014;
+}
+#sec {
+    text-align: center;
+}
+
+.firstdiv {
+    height: 100px;
+    background-color: black;
+}
+
+#img {
+    height: 100%;
+    width: 20%;
+}
+
+.firstdiv h1 {
+    color: green;
+    margin: -80px 10px 10px 875px;
+}
+
+.seconddiv #about {
+    color:white;
+    margin:-40px 0px 0px 400px;
+    font-size:30px;
+}
+
+.seconddiv #page {
+    text-color: green;
+    margin:-40px 0px 0px 1410px;
+    font-size: 32px;
+}
+
+
+#thi {
+    text-align: center;
+}
+
+#img2 {
+    height: 100%;
+    width: 15%;
+    margin: 0px 0px 0px 180px;
+}
+
+#img3 {
+    height: 100%;
+    width: 20%;
+    margin: 0px 0px 0px 175px;
+}
+
+#img4 {
+    height: 100%;
+    width: 15%;
+    margin: 0px 0px 0px 145px;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wayone</title>
+</head>
+<body>
+<h1>wayone</h1>
+{%for i in data%}
+
+<p>{{i.name}}
+<p>{{i.slug}}<a href="{{i.get_object_or_404}}">LINK</a>
+{% if i.foreign_id == 1 %}
+    <h1 style="color:red">worker</h1>
+{% else %}
+    <h1 style="color:green">notworker</h1>
+{% endif %}
+{%endfor%}
+</body>
+</html>
