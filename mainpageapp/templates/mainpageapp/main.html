@@ -5,10 +5,11 @@
     <title>Main</title>
 </head>
 <body>
-<h1>MAINPAGE {{data_1}}</h1>
+<h1>MAINPAGE</h1>
 {%for i in data_2%}
+
 <h1>{{i.first}}</h1>
-<a href="../sep/{{i.first}}">LINK</a>
-{% endfor %}
+<a href="{{ i.get_absolute_url }}">Link</a>
+{%endfor%}
 </body>
 </html>

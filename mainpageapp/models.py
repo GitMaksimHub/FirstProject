@@ -18,8 +18,8 @@ class Model(models.Model):
     second = models.BooleanField(default=True)
     slug = models.SlugField(default="", max_length=30, blank=True)
     key = models.ForeignKey("Foreg", on_delete=models.CASCADE)
-    def reverse(self):
-        return reverse("sep", kwargs={"slug_id":self.first})
+    def get_absolute_url(self):
+        return reverse("sep", kwargs={"slug_id":self.slug})
 
 class Foreg(models.Model):
     worker = models.BooleanField(default=False)

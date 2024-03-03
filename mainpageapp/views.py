@@ -9,18 +9,15 @@ from . import models
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
     data = {
-        "data_1":slug_id,
         "data_2":a
     }
     return render(request, "mainpageapp/main.html", data)
 
 
 def separate(request, slug_id):
-    h = get_object_or_404(models.Model, first=slug_id)
+    h = get_object_or_404(models.Model, slug=slug_id)
     data = {
-        "data_1":h.first,
-        "data_2":h.second,
-        "data_3":h.key_id
+        "data_1":h
     }
     return render(request, "mainpageapp/sep.html", data)
 
