@@ -13,8 +13,17 @@ from django.urls import reverse
 
 
 
+class Model(models.Model):
+    first = models.CharField(max_length=20, default="")
+    second = models.BooleanField(default=True)
+    slug = models.SlugField(default="", max_length=30, blank=True)
+    key = models.ForeignKey("Foreg", on_delete=models.CASCADE)
+    def reverse(self):
+        return reverse("sep", kwargs={"slug_id":self.first})
 
-
+class Foreg(models.Model):
+    worker = models.BooleanField(default=False)
+    non_worker = models.BooleanField(default=False)
 
 
 

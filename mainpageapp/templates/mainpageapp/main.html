@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+<h1>MAINPAGE {{data_1}}</h1>
+{%for i in data_2%}
+<h1>{{i.first}}</h1>
+<a href="../sep/{{i.first}}">LINK</a>
+{% endfor %}
+</body>
+</html>
