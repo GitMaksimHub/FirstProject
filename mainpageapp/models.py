@@ -13,11 +13,14 @@ from django.urls import reverse
 
 class Pub(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(second=0)
+        return super().get_queryset().filter(second=Model.Status.TRUE)
 
 class Model(models.Model):
+    class Status(models.IntegerChoices):
+        TRUE = 1, "True"
+        FALSE = 0, "False"
     first = models.CharField(max_length=20, default="")
-    second = models.BooleanField(default=True)
+    second = models.BooleanField(default=Status.TRUE, choices=Status.choices)
     slug = models.SlugField(default="", max_length=30, blank=True)
     key = models.ForeignKey("Foreg", on_delete=models.CASCADE)
     objects = models.Manager()

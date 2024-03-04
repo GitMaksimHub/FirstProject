@@ -4,7 +4,8 @@ from django.shortcuts import render, get_object_or_404  # redirect HttpResponse
 from . import models
 
 
-
+def test(request):
+    return render(request, "mainpageapp/test.html")
 
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
