@@ -8,8 +8,9 @@ from . import models
 
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
+    b = models.Model.pub.all()
     data = {
-        "data_2":a
+        "data_2":b
     }
     return render(request, "mainpageapp/main.html", data)
 
