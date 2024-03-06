@@ -5,7 +5,11 @@ from . import models
 
 
 def test(request):
-    return render(request, "mainpageapp/test.html")
+    a = models.Model.objects.all()
+    data = {
+        "data_1":a
+    }
+    return render(request, "mainpageapp/test.html", data)
 
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
@@ -17,7 +21,7 @@ def mainpage(request, slug_id):
 
 
 def separate(request, slug_id):
-    h = get_object_or_404(models.Model, slug=slug_id)
+    h = get_object_or_404(models.Model, pk=slug_id)
     data = {
         "data_1":h
     }

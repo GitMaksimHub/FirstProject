@@ -14,8 +14,9 @@
             <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Blue Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/1">Blue Card</a></h4>
+                    {%for i in data_1%}
+                    <p class="description">{{i.first}}</p>
                 </div>
             </div> <!-- end card -->
         </div>
@@ -26,8 +27,8 @@
             <div class="card card-just-text" data-background="color" data-color="green" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Green Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/2">Green Card</a></h4>
+                    <p class="description">{{i.first}}</p>
                 </div>
             </div> <!-- end card -->
         </div>
@@ -38,8 +39,8 @@
             <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Yellow Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/3">Yellow Card</a></h4>
+                    <p class="description">{{i.first}}</p>
                 </div>
             </div> <!-- end card -->
         </div>
@@ -50,8 +51,8 @@
             <div class="card card-just-text" data-background="color" data-color="brown" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Brown Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/5">Brown Card</a></h4>
+                    <p class="description">{{i.first}}</p>
                 </div>
             </div> <!-- end card -->
         </div>
@@ -62,8 +63,8 @@
             <div class="card card-just-text" data-background="color" data-color="purple" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Purple Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/6">Purple Card</a></h4>
+                    <p class="description">{{i.first}}</p>
                 </div>
             </div> <!-- end card -->
         </div>
@@ -74,8 +75,9 @@
             <div class="card card-just-text" data-background="color" data-color="orange" data-radius="none">
                 <div class="content">
                     <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Orange Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                    <h4 class="title"><a href="sep/7">Orange Card</a></h4>
+                    <p class="description">{{i.first}}</p>
+                    {%endfor%}
                 </div>
             </div> <!-- end card -->
         </div>
