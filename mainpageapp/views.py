@@ -14,8 +14,11 @@ def test(request):
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
     b = models.Model.pub.all()
+    c = get_object_or_404(models.Model, pk=slug_id)
+    n = 1
     data = {
-        "data_2":b
+        "data_2":c,
+        "n":n
     }
     return render(request, "mainpageapp/main.html", data)
 
