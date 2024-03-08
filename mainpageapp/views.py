@@ -4,12 +4,8 @@ from django.shortcuts import render, get_object_or_404  # redirect HttpResponse
 from . import models
 
 
-def test(request):
-    a = models.Model.objects.all()
-    data = {
-        "data_1":a
-    }
-    return render(request, "mainpageapp/test.html", data)
+
+
 
 def mainpage(request, slug_id):
     a = models.Model.objects.all()
@@ -39,12 +35,22 @@ def separate(request, slug_id):
 
 
 
+def users(request):
+    all_objects = models.Information.objects.all()
+    data = {
+        "objects":all_objects
+    }
+    return render(request, "mainpageapp/users.html", data)
 
 
 
 
-
-
+def test(request):
+    a = models.Information.objects.all
+    data = {
+        "data":a
+    }
+    return render(request, "mainpageapp/test.html", data)
 
 
 

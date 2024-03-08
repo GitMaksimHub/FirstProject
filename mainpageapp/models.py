@@ -46,3 +46,24 @@ class Foreg(models.Model):
 
 
 
+
+class Information(models.Model):
+    name = models.CharField(max_length=255)
+    mail = models.EmailField(max_length=255)
+    county = models.CharField(max_length=255)
+    payment_method = models.CharField(max_length=255)
+    created_date = models.CharField(max_length=255)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
